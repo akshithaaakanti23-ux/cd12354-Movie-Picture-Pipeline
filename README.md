@@ -410,3 +410,30 @@ kustomize build | kubectl apply -f -
 ## License
 
 [License](LICENSE.md)
+
+## Deployment Verification
+
+The Movie Picture Pipeline application was successfully deployed to Amazon EKS using GitHub Actions.
+
+### Frontend Application
+
+The frontend successfully displays the movie list retrieved from the backend API.
+
+![Frontend Deployment Evidence](frontend-working.png)
+
+### Backend API
+
+The backend `/movies` endpoint successfully returns the movie list in JSON format.
+
+![Backend Deployment Evidence](backend-working.png)
+
+### CI/CD Verification
+
+All four GitHub Actions workflows have been tested successfully:
+
+- Frontend Continuous Integration
+- Backend Continuous Integration
+- Frontend Continuous Deployment
+- Backend Continuous Deployment
+
+Both CI and CD workflows include linting, testing, and build stages. The CD workflows also deploy the applications to Amazon EKS.
